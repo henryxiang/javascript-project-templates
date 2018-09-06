@@ -7,7 +7,7 @@
     "build": "parcel build src/index.html",
     "start": "parcel src/index.html",
     "dev": "parcel watch src/index.html",
-    "test": "jest --runInBand --verbose",
+    "test": "jest --verbose",
     "test:watch": "jest --runInBand --verbose --watchAll",
     "coverage": "jest --coverage --runInBand --verbose",
     "eslint": "eslint src/**/*.js --ignore-pattern 'node_modules'"

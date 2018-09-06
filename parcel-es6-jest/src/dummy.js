@@ -1,3 +1,3 @@
 export default function(name) {
-  return `Hello, ${name}`;
+  return `Hello ${name}`;
 }

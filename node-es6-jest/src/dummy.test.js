@@ -1,6 +1,5 @@
-import greet from './dummy';
+import { greet } from './dummy';
 
 test('dummy test', () => {
-  const name = 'World';
-  expect(greet(name)).toBe(`Hello ${name}`);
-})
+  expect(greet('World')).toBe('Hello World');
+});

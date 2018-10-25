@@ -25,6 +25,4 @@ npm install -s \
     uglifyjs-webpack-plugin \
     webpack \
     webpack-cli \
-    webpack-dev-server \
-    webpack-merge \
-    webpack-visualizer-plugin
+    webpack-dev-server

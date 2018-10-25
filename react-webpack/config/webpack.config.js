@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const nconf = require('.');
+const nconf = require('./config');
 
 const config = {
   entry: ['./app/index.js'],

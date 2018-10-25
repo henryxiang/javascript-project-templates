@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode development --config config/webpack.base.config.js --open --hot --history-api-fallback"
+    "dev": "webpack-dev-server --mode development --config config/webpack.config.js --open --hot --history-api-fallback",
+    "build": "webpack --mode production --config config/webpack.config.js --progress"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "nconf": "^0.10.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0"
   },
@@ -44,7 +46,6 @@
     "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10",
-    "webpack-merge": "^4.1.4",
-    "webpack-visualizer-plugin": "^0.1.11"
+    "webpack-merge": "^4.1.4"
   }
 }

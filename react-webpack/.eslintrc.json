@@ -5,7 +5,7 @@
     "plugin:prettier/recommended",
     "prettier/react"
   ],
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "react"],
   "rules": {
     "prettier/prettier": ["error"],
     "no-console": 0,

@@ -1,9 +1,15 @@
 const express = require('express');
+const User = require('../model/user');
 
 const router = express.Router();
 
-router.get('/:id', (req, res) => {
-  res.json({ id: req.params.id });
+router.get('/', async (req, res) => {
+  try {
+    const users = await User.find();
+    res.json(users);
+  } catch (error) {
+    res.json({ error });
+  }
 });
 
 router.post('/', (req, res) => {

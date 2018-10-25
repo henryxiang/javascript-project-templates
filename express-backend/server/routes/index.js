@@ -2,16 +2,13 @@ const fs = require('fs');
 const path = require('path');
 
 module.exports = app => {
-  app.get('/', (req, res) => {
-    res.render('index', { title: 'Home' });
-  });
-
   fs.readdirSync(__dirname).forEach(file => {
-    const url = path.basename(file, '.js');
-    if (url !== 'index') {
-      const route = require(`./${url}`);
-      app.use(`/${url}`, route);
-      console.log(`config route: /${url}`);
+    if (path.basename(__filename) !== path.basename(file)) {
+      const mod = path.basename(file, '.js');
+      const routePath = mod === '_root' ? '/' : `/${mod}`;
+      const route = require(`./${mod}`);
+      app.use(routePath, route);
+      console.log(`config route: ${routePath}`);
     }
   });
 };

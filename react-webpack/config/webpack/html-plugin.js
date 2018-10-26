@@ -7,7 +7,7 @@ module.exports = (config, nconf) => {
   config.plugins.push(
     new HtmlWebpackPlugin({
       template: `./${srcDir}/html/index.html`,
-      filename: './index.html'
-    })
+      filename: './index.html',
+    }),
   );
 };

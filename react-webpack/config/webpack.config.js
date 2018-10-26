@@ -5,9 +5,9 @@ const nconf = require('./config');
 const config = {
   entry: ['./app/index.js'],
   module: {
-    rules: []
+    rules: [],
   },
-  plugins: []
+  plugins: [],
 };
 
 fs.readdirSync(path.join(__dirname, 'webpack')).forEach(f => {
@@ -17,5 +17,11 @@ fs.readdirSync(path.join(__dirname, 'webpack')).forEach(f => {
     require(`./webpack/${mod}`)(config, nconf);
   }
 });
+
+if (nconf.get('env') === 'dev') {
+  require('./webpack/dev')(config);
+} else {
+  require('./webpack/prod')(config);
+}
 
 module.exports = config;

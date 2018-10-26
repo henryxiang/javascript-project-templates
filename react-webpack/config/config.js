@@ -5,7 +5,7 @@ nconf.argv();
 nconf.env();
 nconf.file({
   file: path.join(__dirname, 'client-config.json'),
-  logicalSeparator: '.'
+  logicalSeparator: '.',
 });
 
 module.exports = nconf;

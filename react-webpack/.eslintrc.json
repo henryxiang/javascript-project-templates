@@ -2,12 +2,11 @@
   "extends": [
     "plugin:react/recommended",
     "airbnb",
-    "prettier",
+    "plugin:prettier/recommended",
     "prettier/react"
   ],
-  "plugins": ["prettier", "react"],
+  "plugins": ["react"],
   "rules": {
-    "prettier/prettier": ["error"],
     "no-console": 0,
     "global-require": 0,
     "import/no-dynamic-require": 0,

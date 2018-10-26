@@ -48,17 +48,17 @@ const config = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
-        }
-      }
-    ]
+          loader: 'babel-loader',
+        },
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './app/html/index.html',
-      filename: './index.html'
-    })
-  ]
+      filename: './index.html',
+    }),
+  ],
 };
 
 module.exports = config;
@@ -83,7 +83,18 @@ module.exports = config;
 Installing dependencies
 
 ```bash
+npm install -D \
+    babel-eslint \
+    eslint \
+    eslint-config-airbnb \
+    eslint-config-prettier \
+    eslint-plugin-import \
+    eslint-plugin-jsx-a11y \
+    eslint-plugin-prettier \
+    eslint-plugin-react \
+    prettier
 
+./node_modules/.bin/eslint --init
 ```
 
 .eslintrc

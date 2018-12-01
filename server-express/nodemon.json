@@ -1,15 +1,10 @@
 {
-  "ignore": [
-    ".git",
-    "node_modules"
-  ],
+  "ignore": [".git", "node_modules"],
   "verbose": true,
   "execMap": {
     "js": "node --harmony"
   },
-  "watch": [
-    "server/**/*.*"
-  ],
+  "watch": ["src/**/*.*"],
   "env": {
     "NODE_ENV": "development"
   }

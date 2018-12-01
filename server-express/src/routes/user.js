@@ -12,8 +12,27 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.post('/', (req, res) => {
-  res.json(req.body);
+router.post('/', async (req, res) => {
+  const { username, password, firstName, lastName } = req.body;
+  const user = new User({ username, password, firstName, lastName });
+  await user.save();
+  return res.json(user);
+  // res.json(req.body);
+});
+
+router.put('/', async (req, res) => {
+  const { username, password, firstName, lastName } = req.body;
+  const user = await User.findOneAndUpdate(
+    { username },
+    { password, firstName, lastName }
+  );
+  return res.json(user);
+});
+
+router.delete('/', async (req, res) => {
+  const { username } = req.body;
+  const user = await User.findOneAndRemove({ username });
+  return res.json(user);
 });
 
 module.exports = router;

@@ -1,12 +1,12 @@
 {
-  "env": "dev",
+  "env": "demo",
   "http": {
     "port": 8080,
-    "context": "/dev"
+    "context": "/demo"
   },
   "mongo": {
     "hostname": "localhost",
     "port": 27017,
-    "database": "dev"
+    "database": "demo"
   }
 }

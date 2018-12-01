@@ -1,6 +1,6 @@
 {
   "env": "dev",
   "webpack": {
-    "srcDir": "app"
+    "srcDir": "src"
   }
 }

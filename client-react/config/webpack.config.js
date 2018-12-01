@@ -3,7 +3,7 @@ const path = require('path');
 const nconf = require('./config');
 
 const config = {
-  entry: ['./app/index.js'],
+  entry: ['./src/index.js'],
   module: {
     rules: [],
   },

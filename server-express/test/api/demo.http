@@ -1,8 +1,8 @@
 ### List all users
-GET http://localhost:8080/user
+GET http://localhost:8080/api/user
 
 ### Create a new user
-POST http://localhost:8080/user
+POST http://localhost:8080/api/user
 content-type: application/json
 
 {
@@ -13,7 +13,7 @@ content-type: application/json
 }
 
 ### Update an existing user
-POST http://localhost:8080/user
+POST http://localhost:8080/api/user
 content-type: application/json
 
 {
@@ -24,7 +24,7 @@ content-type: application/json
 }
 
 ### Delete a user
-DELETE http://localhost:8080/user
+DELETE http://localhost:8080/api/user
 content-type: application/json
 
 {
